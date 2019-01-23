@@ -1347,4 +1347,16 @@ Wire Wire Line
 	2350 3300 2500 3300
 Wire Wire Line
 	2350 3400 2500 3400
+Text GLabel 2500 3200 2    50   Output ~ 0
+SDA2
+Text GLabel 2500 3100 2    50   Output ~ 0
+SCL2
+Text GLabel 2500 3600 2    50   Output ~ 0
+SDA1
+Text GLabel 2500 3700 2    50   Output ~ 0
+SCL1
+Wire Wire Line
+	2350 3600 2500 3600
+Wire Wire Line
+	2500 3700 2350 3700
 $EndSCHEMATC
