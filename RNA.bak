@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:RNA-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L MCU_ST_STM32F3:STM32F303C6Tx U?
-U 1 1 5C445D0D
-P 1750 2400
-F 0 "U?" H 1700 814 50  0000 C CNN
-F 1 "STM32F303C6Tx" H 1700 723 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 1150 1000 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00092070.pdf" H 1750 2400 50  0001 C CNN
-	1    1750 2400
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5C445D86
@@ -1339,24 +1329,293 @@ Wire Wire Line
 	9100 3000 9150 3000
 Wire Wire Line
 	9750 3000 9800 3000
-Text GLabel 2500 3300 2    50   Output ~ 0
+Text GLabel 2500 3300 2    50   BiDi ~ 0
 D-
-Text GLabel 2500 3400 2    50   Output ~ 0
+Text GLabel 2500 3400 2    50   BiDi ~ 0
 D+
 Wire Wire Line
 	2350 3300 2500 3300
 Wire Wire Line
 	2350 3400 2500 3400
-Text GLabel 2500 3200 2    50   Output ~ 0
+Text GLabel 2500 3200 2    50   BiDi ~ 0
 SDA2
 Text GLabel 2500 3100 2    50   Output ~ 0
 SCL2
-Text GLabel 2500 3600 2    50   Output ~ 0
+Text GLabel 850  2900 0    50   BiDi ~ 0
 SDA1
-Text GLabel 2500 3700 2    50   Output ~ 0
+Text GLabel 850  2800 0    50   Output ~ 0
 SCL1
 Wire Wire Line
 	2350 3600 2500 3600
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J?
+U 1 1 5C488EEE
+P 1300 5850
+F 0 "J?" H 1405 6717 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1405 6626 50  0000 C CNN
+F 2 "" H 1450 5850 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1450 5850 50  0001 C CNN
+	1    1300 5850
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2500 3700 2350 3700
+	1900 5950 2150 5950
+Wire Wire Line
+	1900 6050 2150 6050
+Wire Wire Line
+	2150 6050 2150 5950
+Wire Wire Line
+	1900 5750 2150 5750
+Wire Wire Line
+	1900 5850 2150 5850
+Wire Wire Line
+	2150 5850 2150 5750
+$Comp
+L Power_Protection:USBLC6-2SC6 U?
+U 1 1 5C4D2E7C
+P 3000 5900
+F 0 "U?" V 2954 6441 50  0000 L CNN
+F 1 "USBLC6-2SC6" V 3045 6441 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2250 6300 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3200 6250 50  0001 C CNN
+	1    3000 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 5750 2300 5750
+Wire Wire Line
+	2300 5750 2300 5400
+Wire Wire Line
+	2300 5400 2900 5400
+Connection ~ 2150 5750
+Wire Wire Line
+	2150 6050 2150 6250
+Wire Wire Line
+	2150 6250 2250 6250
+Wire Wire Line
+	2250 6250 2250 6400
+Wire Wire Line
+	2250 6400 2900 6400
+Connection ~ 2150 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5C54F804
+P 2500 6050
+F 0 "#PWR?" H 2500 5800 50  0001 C CNN
+F 1 "GND" H 2505 5877 50  0000 C CNN
+F 2 "" H 2500 6050 50  0001 C CNN
+F 3 "" H 2500 6050 50  0001 C CNN
+	1    2500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 5C54F8C6
+P 3600 5600
+F 0 "#PWR?" H 3600 5450 50  0001 C CNN
+F 1 "VBUS" H 3615 5773 50  0000 C CNN
+F 2 "" H 3600 5600 50  0001 C CNN
+F 3 "" H 3600 5600 50  0001 C CNN
+	1    3600 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5900 3600 5900
+Wire Wire Line
+	3600 5900 3600 5600
+Wire Wire Line
+	2500 5900 2500 6050
+Text GLabel 4200 6400 2    50   BiDi ~ 0
+D+
+Wire Wire Line
+	3100 6400 3950 6400
+$Comp
+L Device:R_Small R?
+U 1 1 5C58731A
+P 3950 6150
+F 0 "R?" H 4009 6196 50  0000 L CNN
+F 1 "1.5k" H 4009 6105 50  0000 L CNN
+F 2 "" H 3950 6150 50  0001 C CNN
+F 3 "~" H 3950 6150 50  0001 C CNN
+	1    3950 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 6250 3950 6400
+Connection ~ 3950 6400
+Wire Wire Line
+	3950 6400 4200 6400
+$Comp
+L power:VDD #PWR?
+U 1 1 5C5954BF
+P 3950 5850
+F 0 "#PWR?" H 3950 5700 50  0001 C CNN
+F 1 "VDD" H 3967 6023 50  0000 C CNN
+F 2 "" H 3950 5850 50  0001 C CNN
+F 3 "" H 3950 5850 50  0001 C CNN
+	1    3950 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5850 3950 6050
+Text GLabel 3250 5150 2    50   BiDi ~ 0
+D-
+Wire Wire Line
+	3100 5400 3100 5150
+Wire Wire Line
+	3100 5150 3250 5150
+Wire Wire Line
+	2350 3200 2500 3200
+Wire Wire Line
+	2350 3100 2500 3100
+$Comp
+L MCU_ST_STM32F3:STM32F302CBTx U?
+U 1 1 5C5DD487
+P 1750 2400
+F 0 "U?" H 1700 814 50  0000 C CNN
+F 1 "STM32F302CBTx" H 1700 723 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 1150 1000 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00094064.pdf" H 1750 2400 50  0001 C CNN
+	1    1750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5C5DD5E3
+P 3650 3350
+F 0 "J?" H 3570 2825 50  0000 C CNN
+F 1 "Conn_01x06" H 3570 2916 50  0000 C CNN
+F 2 "" H 3650 3350 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	-1   0    0    1   
+$EndComp
+Text GLabel 4100 3450 2    50   Output ~ 0
+SWCLK
+$Comp
+L power:GND #PWR?
+U 1 1 5C5DEF22
+P 4000 3700
+F 0 "#PWR?" H 4000 3450 50  0001 C CNN
+F 1 "GND" H 4005 3527 50  0000 C CNN
+F 2 "" H 4000 3700 50  0001 C CNN
+F 3 "" H 4000 3700 50  0001 C CNN
+	1    4000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3350 4000 3350
+Wire Wire Line
+	4000 3350 4000 3700
+Wire Wire Line
+	3850 3450 4100 3450
+Text GLabel 4100 3250 2    50   BiDi ~ 0
+SWDIO
+Text GLabel 4100 3150 2    50   Output ~ 0
+NRST
+Text GLabel 4100 3050 2    50   BiDi ~ 0
+SWO
+Wire Wire Line
+	3850 3050 4100 3050
+Wire Wire Line
+	3850 3150 4100 3150
+Wire Wire Line
+	3850 3250 4100 3250
+Text GLabel 850  2500 0    50   BiDi ~ 0
+SWO
+Text GLabel 850  1100 0    50   Input ~ 0
+NRST
+$Comp
+L power:VBUS #PWR?
+U 1 1 5C630548
+P 2000 4950
+F 0 "#PWR?" H 2000 4800 50  0001 C CNN
+F 1 "VBUS" H 2015 5123 50  0000 C CNN
+F 2 "" H 2000 4950 50  0001 C CNN
+F 3 "" H 2000 4950 50  0001 C CNN
+	1    2000 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5250 2000 5250
+Wire Wire Line
+	2000 5250 2000 4950
+$Comp
+L power:VDD #PWR?
+U 1 1 5C641A0E
+P 3900 2850
+F 0 "#PWR?" H 3900 2700 50  0001 C CNN
+F 1 "VDD" H 3917 3023 50  0000 C CNN
+F 2 "" H 3900 2850 50  0001 C CNN
+F 3 "" H 3900 2850 50  0001 C CNN
+	1    3900 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3550 3900 3550
+Wire Wire Line
+	3900 3550 3900 2850
+Text GLabel 2500 3600 2    50   Input ~ 0
+SWCLK
+Text GLabel 2500 3500 2    50   BiDi ~ 0
+SWDIO
+Wire Wire Line
+	2350 3500 2500 3500
+Wire Wire Line
+	850  2900 1050 2900
+Wire Wire Line
+	850  2800 1050 2800
+Wire Wire Line
+	850  2500 1050 2500
+Wire Wire Line
+	850  1100 1050 1100
+$Comp
+L Connector:AudioJack4 J?
+U 1 1 5C6B2F7F
+P 4400 4700
+F 0 "J?" H 4070 4583 50  0000 R CNN
+F 1 "AudioJack4" H 4070 4674 50  0000 R CNN
+F 2 "" H 4400 4700 50  0001 C CNN
+F 3 "~" H 4400 4700 50  0001 C CNN
+	1    4400 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C6D5F72
+P 4000 5000
+F 0 "#PWR?" H 4000 4750 50  0001 C CNN
+F 1 "GND" H 4005 4827 50  0000 C CNN
+F 2 "" H 4000 5000 50  0001 C CNN
+F 3 "" H 4000 5000 50  0001 C CNN
+	1    4000 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5C6E77F0
+P 4000 4150
+F 0 "#PWR?" H 4000 4000 50  0001 C CNN
+F 1 "VDD" H 4017 4323 50  0000 C CNN
+F 2 "" H 4000 4150 50  0001 C CNN
+F 3 "" H 4000 4150 50  0001 C CNN
+	1    4000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4150 4000 4500
+Wire Wire Line
+	4000 4500 4200 4500
+Wire Wire Line
+	4000 5000 4000 4800
+Wire Wire Line
+	4000 4800 4200 4800
+Text GLabel 850  1500 0    50   Input ~ 0
+OSC_IN
+Text GLabel 850  1600 0    50   Output ~ 0
+OSC_OUT
+Wire Wire Line
+	850  1600 1050 1600
+Wire Wire Line
+	1050 1500 850  1500
 $EndSCHEMATC
