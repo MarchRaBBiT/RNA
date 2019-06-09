@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:RNA-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -1486,11 +1486,7 @@ Text GLabel 4950 7000 0    50   Input ~ 0
 SCL1
 Text GLabel 4950 7100 0    50   BiDi ~ 0
 SDA1
-Wire Wire Line
-	4975 7100 5175 7100
 Connection ~ 5175 7100
-Wire Wire Line
-	4975 7000 5325 7000
 Connection ~ 5325 7000
 NoConn ~ 7300 1375
 Wire Wire Line
@@ -1861,11 +1857,7 @@ Text GLabel 4300 5150 0    50   Input ~ 0
 SCL2
 Text GLabel 4300 5250 0    50   BiDi ~ 0
 SDA2
-Wire Wire Line
-	4325 5250 4525 5250
 Connection ~ 4525 5250
-Wire Wire Line
-	4325 5150 4675 5150
 Connection ~ 4675 5150
 Text GLabel 2500 3700 2    50   Input ~ 0
 VBUS_SENSE
@@ -2039,4 +2031,18 @@ Wire Wire Line
 	2500 6150 2750 6150
 Wire Wire Line
 	2500 5350 2500 6150
+Wire Wire Line
+	4300 5250 4525 5250
+Wire Wire Line
+	4300 5150 4675 5150
+Wire Wire Line
+	4950 7100 5175 7100
+Wire Wire Line
+	4950 7000 5325 7000
+$Sheet
+S 1300 6950 1850 750 
+U 5D06BBC1
+F0 "RNA_SubBoard" 50
+F1 "RNA_Sub.sch" 50
+$EndSheet
 $EndSCHEMATC
