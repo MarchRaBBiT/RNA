@@ -1287,10 +1287,10 @@ Text GLabel 2500 3300 2    50   BiDi ~ 0
 D-
 Text GLabel 2500 3400 2    50   BiDi ~ 0
 D+
-Text GLabel 2500 3200 2    50   BiDi ~ 0
-SDA2
-Text GLabel 2500 3100 2    50   Output ~ 0
-SCL2
+Text GLabel 950  2600 0    50   BiDi ~ 0
+SDA3
+Text GLabel 2500 2900 2    50   Output ~ 0
+SCL3
 Text GLabel 950  2900 0    50   BiDi ~ 0
 SDA1
 Text GLabel 950  2800 0    50   Output ~ 0
@@ -1489,10 +1489,6 @@ SDA1
 Connection ~ 5175 7100
 Connection ~ 5325 7000
 NoConn ~ 7300 1375
-Wire Wire Line
-	2350 3100 2500 3100
-Wire Wire Line
-	2350 3200 2500 3200
 Wire Wire Line
 	2350 3300 2500 3300
 Wire Wire Line
@@ -1796,9 +1792,9 @@ Wire Wire Line
 Wire Wire Line
 	4525 5250 5100 5250
 Text GLabel 4300 5150 0    50   Input ~ 0
-SCL2
+SCL3
 Text GLabel 4300 5250 0    50   BiDi ~ 0
-SDA2
+SDA3
 Connection ~ 4525 5250
 Connection ~ 4675 5150
 Text GLabel 2500 3700 2    50   Input ~ 0
@@ -2071,4 +2067,8 @@ Wire Wire Line
 	10450 1450 10450 1750
 Wire Wire Line
 	10450 1750 10000 1750
+Wire Wire Line
+	2350 2900 2500 2900
+Wire Wire Line
+	950  2600 1150 2600
 $EndSCHEMATC
