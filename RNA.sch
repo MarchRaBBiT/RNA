@@ -1287,10 +1287,8 @@ Text GLabel 2500 3300 2    50   BiDi ~ 0
 D-
 Text GLabel 2500 3400 2    50   BiDi ~ 0
 D+
-Text GLabel 950  2600 0    50   BiDi ~ 0
-SDA3
 Text GLabel 2500 2900 2    50   Output ~ 0
-SCL3
+MOSI
 Text GLabel 950  2900 0    50   BiDi ~ 0
 SDA1
 Text GLabel 950  2800 0    50   Output ~ 0
@@ -1635,14 +1633,14 @@ Text GLabel 950  3300 0    50   Input ~ 0
 COL4
 Text GLabel 950  3400 0    50   Input ~ 0
 COL5
-Text GLabel 950  3500 0    50   Input ~ 0
+Text GLabel 950  2600 0    50   Input ~ 0
 COL6
-Text GLabel 950  3600 0    50   Input ~ 0
+Text GLabel 950  2700 0    50   Input ~ 0
 COL7
 Wire Wire Line
-	950  3600 1150 3600
+	950  2700 1150 2700
 Wire Wire Line
-	950  3500 1150 3500
+	950  2600 1150 2600
 Wire Wire Line
 	950  3400 1150 3400
 Wire Wire Line
@@ -1792,9 +1790,9 @@ Wire Wire Line
 Wire Wire Line
 	4525 5250 5100 5250
 Text GLabel 4300 5150 0    50   Input ~ 0
-SCL3
+SCL2
 Text GLabel 4300 5250 0    50   BiDi ~ 0
-SDA3
+SDA2
 Connection ~ 4525 5250
 Connection ~ 4675 5150
 Text GLabel 2500 3700 2    50   Input ~ 0
@@ -1983,17 +1981,6 @@ U 5D06BBC1
 F0 "RNA_SubBoard" 50
 F1 "RNA_Sub.sch" 50
 $EndSheet
-$Comp
-L Memory_EEPROM:CAT24M01W U4
-U 1 1 5D0A58A2
-P 10000 1350
-F 0 "U4" H 10000 1831 50  0000 C CNN
-F 1 "CAT24M01W" H 10000 1740 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10850 1100 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/CAT24M01-D.PDF" H 10000 1350 50  0001 C CNN
-	1    10000 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8650 1150 8400 1150
 $Comp
@@ -2009,20 +1996,13 @@ F 3 "" H 10000 1850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10000 1650 10000 1750
-Wire Wire Line
-	9600 1450 9600 1750
-Wire Wire Line
-	9600 1750 10000 1750
 Connection ~ 10000 1750
 Wire Wire Line
 	10000 1750 10000 1850
-Wire Wire Line
-	9600 1350 9600 1450
-Connection ~ 9600 1450
 Text GLabel 10550 1250 2    50   Input ~ 0
-SDA1
+SCK
 Text GLabel 10550 1350 2    50   Input ~ 0
-SCL1
+MOSI
 $Comp
 L power:VDD #PWR0122
 U 1 1 5D120387
@@ -2043,32 +2023,73 @@ Wire Wire Line
 $Comp
 L Device:C_Small C8
 U 1 1 5D17A0FE
-P 9600 1100
-F 0 "C8" H 9692 1146 50  0000 L CNN
-F 1 "100n" H 9692 1055 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9600 1100 50  0001 C CNN
-F 3 "~" H 9600 1100 50  0001 C CNN
-	1    9600 1100
+P 9400 1100
+F 0 "C8" H 9492 1146 50  0000 L CNN
+F 1 "100n" H 9492 1055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9400 1100 50  0001 C CNN
+F 3 "~" H 9400 1100 50  0001 C CNN
+	1    9400 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9600 1000 9600 950 
-Wire Wire Line
-	9600 950  10000 950 
 Connection ~ 10000 950 
 Wire Wire Line
 	10000 950  10000 1050
 Wire Wire Line
-	9600 1200 9600 1350
-Connection ~ 9600 1350
-Wire Wire Line
-	10400 1450 10450 1450
-Wire Wire Line
-	10450 1450 10450 1750
-Wire Wire Line
-	10450 1750 10000 1750
-Wire Wire Line
 	2350 2900 2500 2900
+$Comp
+L Memory_EEPROM:CAT250xxx U?
+U 1 1 5D17739A
+P 10000 1350
+F 0 "U?" H 10000 1831 50  0000 C CNN
+F 1 "CAT250xxx" H 10000 1740 50  0000 C CNN
+F 2 "" H 10000 1350 50  0001 C CNN
+F 3 "http://www.onsemi.com/PowerSolutions/product.do?id=CAT25040" H 10000 1350 50  0001 C CNN
+	1    10000 1350
+	1    0    0    -1  
+$EndComp
+Text GLabel 10550 1450 2    50   Output ~ 0
+MISO
 Wire Wire Line
-	950  2600 1150 2600
+	10400 1450 10550 1450
+Wire Wire Line
+	9400 950  9400 1000
+Wire Wire Line
+	9400 950  9550 950 
+Wire Wire Line
+	9400 1750 10000 1750
+Wire Wire Line
+	9600 1450 9400 1450
+Connection ~ 9400 1450
+Wire Wire Line
+	9400 1450 9400 1750
+Text GLabel 2500 2700 2    50   Output ~ 0
+SCK
+Text GLabel 2500 2800 2    50   Input ~ 0
+MISO
+Wire Wire Line
+	2350 2700 2500 2700
+Wire Wire Line
+	2350 2800 2500 2800
+Text GLabel 950  3500 0    50   Output ~ 0
+SCL2
+Text GLabel 950  3600 0    50   BiDi ~ 0
+SDA2
+Wire Wire Line
+	950  3500 1150 3500
+Wire Wire Line
+	950  3600 1150 3600
+Wire Wire Line
+	9400 1200 9400 1450
+Wire Wire Line
+	9600 1250 9550 1250
+Wire Wire Line
+	9550 1250 9550 950 
+Connection ~ 9550 950 
+Wire Wire Line
+	9550 950  10000 950 
+Wire Wire Line
+	9550 1350 9550 1250
+Wire Wire Line
+	9550 1350 9600 1350
+Connection ~ 9550 1250
 $EndSCHEMATC
