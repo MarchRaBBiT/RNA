@@ -26,21 +26,13 @@ F 3 "" H 1850 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 3900 1850 4050
-Wire Wire Line
-	1550 3900 1550 4050
-Wire Wire Line
 	1550 4050 1650 4050
 Connection ~ 1850 4050
 Wire Wire Line
 	1850 4050 1850 4200
-Wire Wire Line
-	1650 3900 1650 4050
 Connection ~ 1650 4050
 Wire Wire Line
 	1650 4050 1750 4050
-Wire Wire Line
-	1750 3900 1750 4050
 Connection ~ 1750 4050
 Wire Wire Line
 	1750 4050 1850 4050
@@ -1283,14 +1275,14 @@ Wire Wire Line
 	9100 3000 9150 3000
 Wire Wire Line
 	9750 3000 9800 3000
-Text GLabel 2500 3300 2    50   BiDi ~ 0
-D-
 Text GLabel 2500 3400 2    50   BiDi ~ 0
+D-
+Text GLabel 2500 3500 2    50   BiDi ~ 0
 D+
-Text GLabel 950  2600 0    50   BiDi ~ 0
-SDA3
-Text GLabel 2500 2900 2    50   Output ~ 0
-SCL3
+Text GLabel 950  3400 0    50   BiDi ~ 0
+SDA2
+Text GLabel 950  3300 0    50   Output ~ 0
+SCL2
 Text GLabel 950  2900 0    50   BiDi ~ 0
 SDA1
 Text GLabel 950  2800 0    50   Output ~ 0
@@ -1389,22 +1381,22 @@ Wire Wire Line
 	8400 1650 8450 1650
 Wire Wire Line
 	8450 1650 8450 950 
-Text GLabel 2500 3600 2    50   Input ~ 0
+Text GLabel 2500 3700 2    50   Input ~ 0
 SWCLK
-Text GLabel 2500 3500 2    50   BiDi ~ 0
+Text GLabel 2500 3600 2    50   BiDi ~ 0
 SWDIO
 Wire Wire Line
-	950  2900 1150 2900
+	950  2900 1050 2900
 Wire Wire Line
-	950  2800 1150 2800
+	950  2800 1050 2800
 Wire Wire Line
-	950  1200 1150 1200
+	950  1200 1050 1200
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5C6B2F7F
 P 5950 7000
 F 0 "J3" H 5620 6883 50  0000 R CNN
-F 1 "AudioJack4" H 5620 6974 50  0000 R CNN
+F 1 "JST SM04B" H 5620 6974 50  0000 R CNN
 F 2 "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal" H 5950 7000 50  0001 C CNN
 F 3 "~" H 5950 7000 50  0001 C CNN
 	1    5950 7000
@@ -1490,24 +1482,13 @@ Connection ~ 5175 7100
 Connection ~ 5325 7000
 NoConn ~ 7300 1375
 Wire Wire Line
-	2350 3300 2500 3300
-Wire Wire Line
 	2350 3400 2500 3400
 Wire Wire Line
 	2350 3500 2500 3500
 Wire Wire Line
 	2350 3600 2500 3600
-$Comp
-L MCU_ST_STM32L4:STM32L433CCTx U1
-U 1 1 5C4F0654
-P 1750 2400
-F 0 "U1" H 1700 814 50  0000 C CNN
-F 1 "STM32F072C8Tx" H 1700 723 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 1150 1000 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 1750 2400 50  0001 C CNN
-	1    1750 2400
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	2350 3700 2500 3700
 $Comp
 L Device:Polyfuse_Small F1
 U 1 1 5C4F31CD
@@ -1624,47 +1605,45 @@ Wire Wire Line
 Text GLabel 950  1400 0    50   Input ~ 0
 BOOT0
 Wire Wire Line
-	950  1400 1150 1400
+	950  1400 1050 1400
 Text GLabel 950  3000 0    50   Input ~ 0
 COL1
 Text GLabel 950  3100 0    50   Input ~ 0
 COL2
 Text GLabel 950  3200 0    50   Input ~ 0
 COL3
-Text GLabel 950  3300 0    50   Input ~ 0
-COL4
-Text GLabel 950  3400 0    50   Input ~ 0
-COL5
 Text GLabel 950  3500 0    50   Input ~ 0
-COL6
+COL4
 Text GLabel 950  3600 0    50   Input ~ 0
+COL5
+Text GLabel 950  3700 0    50   Input ~ 0
+COL6
+Text GLabel 950  3800 0    50   Input ~ 0
 COL7
 Wire Wire Line
-	950  3600 1150 3600
+	950  3800 1050 3800
 Wire Wire Line
-	950  3500 1150 3500
+	950  3700 1050 3700
 Wire Wire Line
-	950  3400 1150 3400
+	950  3600 1050 3600
 Wire Wire Line
-	950  3300 1150 3300
+	950  3500 1050 3500
 Wire Wire Line
-	950  3200 1150 3200
+	950  3200 1050 3200
 Wire Wire Line
-	950  3100 1150 3100
+	950  3100 1050 3100
 Wire Wire Line
-	950  3000 1150 3000
-Text GLabel 2500 2200 2    50   Output ~ 0
-ROW1
+	950  3000 1050 3000
 Text GLabel 2500 2300 2    50   Output ~ 0
-ROW2
+ROW1
 Text GLabel 2500 2400 2    50   Output ~ 0
-ROW3
+ROW2
 Text GLabel 2500 2500 2    50   Output ~ 0
-ROW4
+ROW3
 Text GLabel 2500 2600 2    50   Output ~ 0
+ROW4
+Text GLabel 2500 2700 2    50   Output ~ 0
 ROW5
-Wire Wire Line
-	2350 2200 2500 2200
 Wire Wire Line
 	2350 2300 2500 2300
 Wire Wire Line
@@ -1673,6 +1652,8 @@ Wire Wire Line
 	2350 2500 2500 2500
 Wire Wire Line
 	2350 2600 2500 2600
+Wire Wire Line
+	2350 2700 2500 2700
 $Comp
 L power:GND #PWR0115
 U 1 1 5C8C88BE
@@ -1713,7 +1694,7 @@ L Connector_Generic:Conn_01x04 J2
 U 1 1 5CEE4168
 P 5300 5150
 F 0 "J2" H 4970 5033 50  0000 R CNN
-F 1 "SM04B-SRSS-TB(LF)(SN)" H 4970 5124 50  0000 R CNN
+F 1 "PinHeader_01x04" H 4970 5124 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5300 5150 50  0001 C CNN
 F 3 "~" H 5300 5150 50  0001 C CNN
 	1    5300 5150
@@ -1792,15 +1773,15 @@ Wire Wire Line
 Wire Wire Line
 	4525 5250 5100 5250
 Text GLabel 4300 5150 0    50   Input ~ 0
-SCL3
+SCL2
 Text GLabel 4300 5250 0    50   BiDi ~ 0
-SDA3
+SDA2
 Connection ~ 4525 5250
 Connection ~ 4675 5150
-Text GLabel 2500 3700 2    50   Input ~ 0
+Text GLabel 2500 3800 2    50   Input ~ 0
 VBUS_SENSE
 Wire Wire Line
-	2500 3700 2350 3700
+	2500 3800 2350 3800
 $Comp
 L Switch:SW_SPST SW1
 U 1 1 5CF68E1F
@@ -1812,12 +1793,6 @@ F 3 "" H 4050 2650 50  0001 C CNN
 	1    4050 2650
 	0    1    1    0   
 $EndComp
-Text GLabel 950  2500 0    50   Input ~ 0
-SWO
-Wire Wire Line
-	950  2500 1150 2500
-Text GLabel 8650 1150 2    50   Input ~ 0
-SWO
 $Comp
 L random-keyboard-parts:PRTR5V0U2X U2
 U 1 1 5CF46EE6
@@ -1854,7 +1829,7 @@ $EndComp
 Wire Wire Line
 	6200 1000 6200 1300
 Wire Wire Line
-	6400 1300 6600 1300
+	6400 1300 6425 1300
 $Comp
 L power:GND #PWR0119
 U 1 1 5D09034F
@@ -2068,7 +2043,88 @@ Wire Wire Line
 Wire Wire Line
 	10450 1750 10000 1750
 Wire Wire Line
-	2350 2900 2500 2900
+	950  3400 1050 3400
 Wire Wire Line
-	950  2600 1150 2600
+	1750 4000 1750 4050
+Wire Wire Line
+	1650 4000 1650 4050
+Wire Wire Line
+	1550 4000 1550 4050
+Wire Wire Line
+	1850 4000 1850 4050
+$Comp
+L MCU_ST_STM32F0:STM32F072CBTx U1
+U 1 1 5DB0F470
+P 1750 2500
+F 0 "U1" H 1700 911 50  0000 C CNN
+F 1 "STM32F072CBTx" H 1700 820 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 1150 1100 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 1750 2500 50  0001 C CNN
+	1    1750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  3300 1050 3300
+NoConn ~ 8650 1150
+NoConn ~ 1050 1600
+NoConn ~ 1050 1700
+NoConn ~ 1050 1900
+NoConn ~ 1050 2000
+NoConn ~ 1050 2100
+NoConn ~ 1050 2300
+NoConn ~ 1050 2400
+NoConn ~ 1050 2500
+NoConn ~ 1050 2600
+NoConn ~ 1050 2700
+NoConn ~ 2350 3000
+NoConn ~ 2350 3100
+NoConn ~ 2350 3200
+NoConn ~ 2350 3300
+Text GLabel 2975 4525 0    50   Input ~ 0
+VBUS_SENSE
+NoConn ~ 3100 4525
+Wire Wire Line
+	3100 4525 2975 4525
+NoConn ~ 2350 2800
+NoConn ~ 2350 2900
+$Comp
+L power:GNDPWR #PWR0130
+U 1 1 5DE1E45D
+P 4450 6225
+F 0 "#PWR0130" H 4450 6025 50  0001 C CNN
+F 1 "GNDPWR" H 4455 6070 50  0000 C CNN
+F 2 "" H 4450 6175 50  0001 C CNN
+F 3 "" H 4450 6175 50  0001 C CNN
+	1    4450 6225
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 5DE1F46F
+P 4450 6375
+F 0 "#PWR0131" H 4450 6125 50  0001 C CNN
+F 1 "GND" H 4455 6202 50  0000 C CNN
+F 2 "" H 4450 6375 50  0001 C CNN
+F 3 "" H 4450 6375 50  0001 C CNN
+	1    4450 6375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 6375 4450 6225
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DF51B74
+P 6425 950
+F 0 "#FLG0101" H 6425 1025 50  0001 C CNN
+F 1 "PWR_FLAG" H 6425 1123 50  0000 C CNN
+F 2 "" H 6425 950 50  0001 C CNN
+F 3 "~" H 6425 950 50  0001 C CNN
+	1    6425 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 950  6425 1300
+Connection ~ 6425 1300
+Wire Wire Line
+	6425 1300 6600 1300
 $EndSCHEMATC

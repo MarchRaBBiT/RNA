@@ -1322,4 +1322,19 @@ Wire Wire Line
 Connection ~ 1200 3100
 Wire Wire Line
 	1200 3100 1200 3300
+$Comp
+L power:VDD #PWR0133
+U 1 1 5DEC7E55
+P 975 1900
+F 0 "#PWR0133" H 975 1750 50  0001 C CNN
+F 1 "VDD" H 992 2073 50  0000 C CNN
+F 2 "" H 975 1900 50  0001 C CNN
+F 3 "" H 975 1900 50  0001 C CNN
+	1    975  1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2400 975  2400
+Wire Wire Line
+	975  2400 975  1900
 $EndSCHEMATC
